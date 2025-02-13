@@ -1,0 +1,59 @@
+<h3>Comments</h3>
+
+<body>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Comentario</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (comments of data; track comments.id) {
+                <tr>
+                    <td>{{ comments.id }}</td>
+                    <td>{{ comments.name }}</td>
+                    <td>{{ comments.email }}</td>
+                    <td>{{ comments.body }}</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        margin: 20px;
+    }
+    .table-container {
+        width: 90%;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.315);
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #cecece;
+    }
+    th {
+        background-color: #FFD700;
+        color: rgb(0, 0, 0);
+    }
+    tr:hover {
+        background-color: #f1f1f1;
+    }
+</style>
